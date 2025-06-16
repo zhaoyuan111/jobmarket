@@ -1,21 +1,18 @@
 ---
-title: **Queen's pass** 
+title: Queen's pass 
 
 ---
 <!-- 用HTML写标题，插入小logo -->
 <h1>
-  <img src="images/hollow-knight.png" alt="Logo" width="8" height="8" />
-  **Queen's pass**
+  <img src="images/hollow-knight.png" alt="Logo" width="18" height="18" />
+  Queen's pass
 </h1>
-<h2>最新信息</h2>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
-    </li>
-  {% endfor %}
-</ul>
+
+{% for post in site.posts %}
+  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+{% endfor %}
+
 
 ## 🦠🔬🧬🧫
 
