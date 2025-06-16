@@ -1,7 +1,7 @@
 
 <!-- 用HTML写标题，插入小logo -->
 <h1>
-  <img src="images/hollow-knight.png" alt="Logo" width="18" height="18" />
+  <img src="images/hollow-knight.png" alt="Logo" width="28" height="28" />
   Queen's pass
 </h1>
 
