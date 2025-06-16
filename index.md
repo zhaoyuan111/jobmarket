@@ -19,7 +19,7 @@ body {
   font-family: "Centaur", cursive, sans-serif;
 }
 </style>
-<h2>📅 提醒日历</h2>
+<h2>📅 </h2>
 
 <div id="calendar"></div>
 
@@ -89,9 +89,9 @@ body {
 ## 🦠🔬🧬🧫
 <style>
   .post-title {
-    font-family: 'Centaur', cursive;
+    font-family: 'FangSong', cursive;
     color: #333;
-    font-size: 24px;
+    font-size: 32px;
   }
 </style>
 
