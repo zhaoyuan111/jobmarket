@@ -27,12 +27,16 @@ body {
     font-size: 32px;
   }
 </style>
-<h2>📅 </h2>
+<h2>📅</h2>
+
+<div>
+  <button onclick="changeMonth(-1)">« 上一月</button>
+  <button onclick="changeMonth(1)">下一月 »</button>
+</div>
 
 <div id="calendar"></div>
 
 <script>
-  // 把 Jekyll 的数据渲染到 JS 变量
   const events = [
     {% for item in site.data.events %}
       {
@@ -44,15 +48,14 @@ body {
   ];
 
   const calendar = document.getElementById("calendar");
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth();
+  let current = new Date();
 
   function renderCalendar(y, m) {
     calendar.innerHTML = "";
     const date = new Date(y, m, 1);
     const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-    let html = "<table><tr>";
+    let html = `<h3>${y} 年 ${m+1} 月</h3>`;
+    html += "<table><tr>";
     days.forEach(d => html += "<th>" + d + "</th>");
     html += "</tr><tr>";
     for(let i=0; i<date.getDay(); i++) html += "<td></td>";
@@ -78,7 +81,12 @@ body {
     }
   }
 
-  renderCalendar(year, month);
+  function changeMonth(offset) {
+    current.setMonth(current.getMonth() + offset);
+    renderCalendar(current.getFullYear(), current.getMonth());
+  }
+
+  renderCalendar(current.getFullYear(), current.getMonth());
 </script>
 
 <style>
@@ -93,7 +101,13 @@ body {
     width: 40px;
     height: 40px;
   }
+  button {
+    margin: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
 </style>
+
 ## 🦠🔬🧬🧫
 
 
