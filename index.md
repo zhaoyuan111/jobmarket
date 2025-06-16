@@ -1,7 +1,7 @@
 ---
 title: 找工作！！
 ---
-# 🎨 关键词艺术字展示
+# 🦠🔬🧬🧫 Keywords
 
 <div class="word-cloud">
   {% for word in site.highlight_words %}
@@ -53,6 +53,22 @@ title: 找工作！！
 }
 .cloud-word-6 {
   font-size: 1.6rem;
+  color: #264653;
+}
+  .cloud-word-7 {
+  font-size: 1.9rem;
+  color: #256653;
+}
+  .cloud-word-8 {
+  font-size: 1.6rem;
+  color: #266465;
+}
+  .cloud-word-9 {
+  font-size: 2.6rem;
+  color: #267853;
+}
+  .cloud-word-10 {
+  font-size: 2.6rem;
   color: #264653;
 }
 </style>
