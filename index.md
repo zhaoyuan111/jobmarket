@@ -1,6 +1,16 @@
 ---
 title: 找工作！！
 ---
+<h2>最新信息</h2>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
+    </li>
+  {% endfor %}
+</ul>
+
 ## 🦠🔬🧬🧫
 
 <div class="word-cloud">
