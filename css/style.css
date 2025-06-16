@@ -1,0 +1,29 @@
+/* 只针对 posts 页，假设 layout 有个 .post-content 容器 */
+.post-content {
+  font-family: "Georgia", "Merriweather", serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333; /* 文章正文颜色 */
+}
+
+/* 如果主题没有 .post-content，可直接写 body（会影响全局） */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-family: "Georgia", "Merriweather", serif;
+}
+
+/* 超链接统一设置 */
+.post-content a {
+  color: #007acc;          /* 链接颜色 */
+  text-decoration: underline;  /* 默认下划线 */
+  transition: color 0.3s;   /* 平滑 hover 过渡 */
+}
+
+.post-content a:hover {
+  color: #ff6600;          /* 悬停时的颜色 */
+  text-decoration: none;   /* 悬停时可去掉下划线 */
+}
