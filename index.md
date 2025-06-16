@@ -17,7 +17,15 @@ layout: page
 <style>
 body {
   font-family: "Centaur", cursive, sans-serif;
+  font-size: 32px;
 }
+</style>
+<style>
+  .post-title {
+    font-family: 'FangSong', cursive;
+    color: #333;
+    font-size: 32px;
+  }
 </style>
 <h2>📅 </h2>
 
@@ -87,13 +95,7 @@ body {
   }
 </style>
 ## 🦠🔬🧬🧫
-<style>
-  .post-title {
-    font-family: 'FangSong', cursive;
-    color: #333;
-    font-size: 32px;
-  }
-</style>
+
 
 <div class="word-cloud">
   {% for word in site.highlight_words %}
