@@ -1,7 +1,4 @@
----
-title: Queen's pass 
 
----
 <!-- 用HTML写标题，插入小logo -->
 <h1>
   <img src="images/hollow-knight.png" alt="Logo" width="18" height="18" />
@@ -10,11 +7,21 @@ title: Queen's pass
 
 
 {% for post in site.posts %}
-  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  <h2 class="post-title">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h2>
 {% endfor %}
 
 
+
 ## 🦠🔬🧬🧫
+<style>
+  .post-title {
+    font-family: 'Comic Sans MS', cursive;
+    color: #333;
+    font-size: 24px;
+  }
+</style>
 
 <div class="word-cloud">
   {% for word in site.highlight_words %}
