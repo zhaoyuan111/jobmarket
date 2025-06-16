@@ -1,5 +1,6 @@
 ---
-title: 找工作！！
+title: **Queen's pass** <img src="images/hollow-knight.png" alt="Logo" width="8" height="8" />
+
 ---
 <h2>最新信息</h2>
 
