@@ -1,3 +1,4 @@
+theme: minima
 # 仅列出需要高亮悬浮显示的词语
 highlight_words:
   - Regenerative Orthopedics
