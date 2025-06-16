@@ -1,0 +1,13 @@
+# _data/events.yml
+
+- date: "2025-06-15"
+  title: "发布了新版本"
+  link: "/posts/2025-06-15-new-version"
+
+- date: "2025-06-20"
+  title: "团队线上讨论会"
+  link: "/posts/2025-06-20-meeting"
+
+- date: "2025-06-25"
+  title: "上线新功能"
+  link: "/posts/2025-06-25-new-feature"
