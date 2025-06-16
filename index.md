@@ -3,8 +3,8 @@ layout: page
 ---
 <!-- 用HTML写标题，插入小logo -->
 <h1>
-  <img src="images/hollow-knight.png" alt="Logo" width="28" height="28" />
-  Queen's pass
+  <img src="images/hollow-knight.png" alt="Logo" width="35" height="35" />
+  Queen's Pass
 </h1>
 
 
