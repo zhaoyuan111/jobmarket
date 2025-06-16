@@ -1,7 +1,12 @@
 ---
-title: **Queen's pass** <img src="images/hollow-knight.png" alt="Logo" width="8" height="8" />
+title: **Queen's pass** 
 
 ---
+<!-- 用HTML写标题，插入小logo -->
+<h1>
+  <img src="images/hollow-knight.png" alt="Logo" width="8" height="8" />
+  **Queen's pass**
+</h1>
 <h2>最新信息</h2>
 
 <ul>
