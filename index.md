@@ -14,12 +14,82 @@ layout: page
   </h2>
 {% endfor %}
 
+<style>
+body {
+  font-family: "Centaur", cursive, sans-serif;
+}
+</style>
+<h2>📅 提醒日历</h2>
 
+<div id="calendar"></div>
 
+<script>
+  // 把 Jekyll 的数据渲染到 JS 变量
+  const events = [
+    {% for item in site.data.events %}
+      {
+        date: "{{ item.date }}",
+        title: "{{ item.title }}",
+        link: "{{ item.link }}"
+      },
+    {% endfor %}
+  ];
+
+  const calendar = document.getElementById("calendar");
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth();
+
+  function renderCalendar(y, m) {
+    calendar.innerHTML = "";
+    const date = new Date(y, m, 1);
+    const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+    let html = "<table><tr>";
+    days.forEach(d => html += "<th>" + d + "</th>");
+    html += "</tr><tr>";
+    for(let i=0; i<date.getDay(); i++) html += "<td></td>";
+    while(date.getMonth() === m) {
+      const day = date.getDate();
+      const dateString = `${y}-${String(m+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+      const found = events.find(e => e.date === dateString);
+      if(found){
+        html += `<td style="background: #ffd; cursor:pointer;" onclick="showEvent('${found.title}', '${found.link}')">${day}</td>`;
+      } else {
+        html += `<td>${day}</td>`;
+      }
+      if(date.getDay() === 6) html += "</tr><tr>";
+      date.setDate(day + 1);
+    }
+    html += "</tr></table>";
+    calendar.innerHTML = html;
+  }
+
+  function showEvent(title, link) {
+    if(confirm(title + "\\n点击确定查看详情")) {
+      window.location.href = link;
+    }
+  }
+
+  renderCalendar(year, month);
+</script>
+
+<style>
+  #calendar table {
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  #calendar th, #calendar td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+  }
+</style>
 ## 🦠🔬🧬🧫
 <style>
   .post-title {
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Centaur', cursive;
     color: #333;
     font-size: 24px;
   }
