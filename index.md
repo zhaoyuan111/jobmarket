@@ -7,6 +7,17 @@ layout: page
   Queen's Pass
 </h1>
 
+<button onclick="location.href='/_story/'" style="
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+">
+  请点我一下！
+</button>
 
 {% for post in site.posts %}
   <h2 class="post-title">
@@ -35,17 +46,6 @@ body {
 </div>
 
 <div id="calendar"></div>
-<button onclick="location.href='/mypage/'" style="
-  padding: 10px 20px;
-  font-size: 18px;
-  background: #007acc;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-">
-  请点我一下！
-</button>
 
 <script>
   const events = [
