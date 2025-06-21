@@ -7,7 +7,7 @@ layout: page
   Queen's Pass
 </h1>
 
-<button onclick="location.href='/_story/'" style="
+<button onclick="location.href='/story1/'" style="
   padding: 10px 20px;
   font-size: 18px;
   background: #007acc;
