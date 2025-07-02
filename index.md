@@ -263,8 +263,8 @@ body {
   <div id="birthday-popup">
     <h1>🎉 生日快乐！🎂</h1>
     <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Happy Birthday">
-    <p>愿你今天充满笑容和蛋糕 🍰</p>
-    <button onclick="closePopup()">谢谢！</button>
+    <p>希望今天是开心的一天 🍰</p>
+    <button onclick="closePopup()">OK！</button>
   </div>
 </div>
 
@@ -289,3 +289,17 @@ body {
   color: #264653;
 }
 </style>
+
+<button onclick="playMusic(); closePopup()">OK！</button>
+
+<script>
+  function playMusic() {
+    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+    audio.play();
+  }
+
+  function closePopup() {
+    document.getElementById("popup-overlay").style.display = "none";
+  }
+</script>
+
