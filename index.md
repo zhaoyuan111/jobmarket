@@ -262,35 +262,14 @@ body {
 <div id="popup-overlay">
   <div id="birthday-popup">
     <h1>🎉 生日快乐！🎂</h1>
-    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Happy Birthday">
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExemJ4YTBleWNnN3JmY3g3Yjk3YTExbHMzaGpvNXU0cDVuNzMwcXQwbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JoOWFsAGWB0L2aSaA1/giphy.gif" alt="Happy Birthday">
     <p>希望今天是开心的一天 🍰</p>
-    <button onclick="closePopup()">OK！</button>
+    <button onclick="closePopup()">Music！</button>
   </div>
 </div>
 
-<!-- JS 控制关闭 -->
-<script>
-  function closePopup() {
-    document.getElementById("popup-overlay").style.display = "none";
-  }
 
-  // 可选：自动播放生日快乐音乐
-  window.onload = function () {
-    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
-    audio.play().catch(e => console.log('自动播放受限'));
-  };
-</script>
-
-</body>
-</html>
-
-  .cloud-word-10 {
-  font-size: 2.6rem;
-  color: #264653;
-}
-</style>
-
-<button onclick="playMusic(); closePopup()">OK！</button>
+<button onclick="playMusic(); closePopup()">Music！</button>
 
 <script>
   function playMusic() {
