@@ -186,6 +186,104 @@ body {
   font-size: 2.6rem;
   color: #267853;
 }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>生日快乐!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #ffe6f0;
+    }
+
+    /* 背景遮罩 */
+    #popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    /* 弹出框 */
+    #birthday-popup {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      max-width: 400px;
+      animation: popupFadeIn 1s ease;
+      position: relative;
+    }
+
+    @keyframes popupFadeIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    #birthday-popup h1 {
+      color: #ff4081;
+      margin-bottom: 15px;
+    }
+
+    #birthday-popup img {
+      width: 100px;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    #birthday-popup button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #birthday-popup button:hover {
+      background: #e73370;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 弹窗 HTML -->
+<div id="popup-overlay">
+  <div id="birthday-popup">
+    <h1>🎉 生日快乐！🎂</h1>
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Happy Birthday">
+    <p>愿你今天充满笑容和蛋糕 🍰</p>
+    <button onclick="closePopup()">谢谢！</button>
+  </div>
+</div>
+
+<!-- JS 控制关闭 -->
+<script>
+  function closePopup() {
+    document.getElementById("popup-overlay").style.display = "none";
+  }
+
+  // 可选：自动播放生日快乐音乐
+  window.onload = function () {
+    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+    audio.play().catch(e => console.log('自动播放受限'));
+  };
+</script>
+
+</body>
+</html>
+
   .cloud-word-10 {
   font-size: 2.6rem;
   color: #264653;
