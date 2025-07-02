@@ -269,16 +269,23 @@ body {
 </div>
 
 
-<button onclick="playMusic(); closePopup()">Music！</button>
+<!-- 本地音频 -->
+<audio id="happy-audio" src="happy.mp3"></audio>
 
 <script>
   function playMusic() {
-    const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
-    audio.play();
+    const audio = document.getElementById("happy-audio");
+    audio.play().catch(err => {
+      console.log("播放失败:", err);
+      alert("浏览器阻止了自动播放，请手动播放音乐！");
+    });
   }
 
   function closePopup() {
     document.getElementById("popup-overlay").style.display = "none";
   }
 </script>
+
+</body>
+</html>
 
