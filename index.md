@@ -270,7 +270,7 @@ body {
 
 
 <!-- 本地音频 -->
-<audio id="happy-audio" src="happy.mp3"></audio>
+<audio id="happy-audio" src="happy.mp4"></audio>
 
 <script>
   function playMusic() {
