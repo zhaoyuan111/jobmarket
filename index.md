@@ -184,7 +184,13 @@ body {
 }
   .cloud-word-9 {
   font-size: 2.6rem;
-  color: #267853;
+  color: #267843;
+  .cloud-word-10 {
+  font-size: 2.7rem;
+  color: #267863;
+ .cloud-word-11 {
+  font-size: 2.9rem;
+  color: #257853;
 }
 
 
